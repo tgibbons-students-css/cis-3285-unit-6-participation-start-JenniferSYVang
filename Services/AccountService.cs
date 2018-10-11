@@ -50,6 +50,8 @@ namespace Services
         public void Withdrawal(string accountName, decimal amount)
         // withdrawal the given account into the account named
         {
+            // User Story: As a account holder I want to make withdrawals so that my reward balance does not get negatively effected. 
+      
             AccountBase acc = FindAccount(accountName);
 
             // I added an if statement in AccountBase.AddTransaction so that 
