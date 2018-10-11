@@ -32,6 +32,7 @@ namespace Services
             AccountBase acc = FindAccount(accountName);
             return acc.Balance;
         }
+
         public int GetRewardPoints(string accountName)
         // find the reward points of the given account
         {
@@ -49,7 +50,8 @@ namespace Services
         public void Withdrawal(string accountName, decimal amount)
         // withdrawal the given account into the account named
         {
-            throw new NotImplementedException();
+            AccountBase acc = FindAccount(accountName);
+            acc.AddTransaction(0-amount);
         }
 
         private AccountBase FindAccount(string accountName)
