@@ -51,7 +51,10 @@ namespace Services
         // withdrawal the given account into the account named
         {
             AccountBase acc = FindAccount(accountName);
-            acc.AddTransaction(0-amount);
+
+            // I added an if statement in AccountBase.AddTransaction so that 
+            // negative amounts won't effect reward points
+            acc.AddTransaction(0 - amount);
         }
 
         private AccountBase FindAccount(string accountName)
