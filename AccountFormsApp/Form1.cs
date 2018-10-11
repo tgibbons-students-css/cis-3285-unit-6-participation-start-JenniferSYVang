@@ -60,6 +60,7 @@ namespace AccountFormsApp
 
             accService.Deposit(acctName, depositAmt);
 
+            // this will change the balance on the form
             txtBox_Balance.Text = accService.GetAccountBalance(acctName).ToString();
         }
 
@@ -70,6 +71,7 @@ namespace AccountFormsApp
 
             accService.Withdrawal(acctName, withdrawlAmt);
 
+            // this will change the balance on the form
             txtBox_Balance.Text = accService.GetAccountBalance(acctName).ToString();
         }
     }
